@@ -24,8 +24,8 @@ const Header = () => {
         <div className='dark:bg-gray-200'>
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between ">
-                    {/* <div className="flex items-center">
-                        <Link
+                    <div className="flex items-center">
+                        {/* <Link
                             to="/"
                             aria-label="Learn with Aungstrome"
                             title="Learn with Aungstrome"
@@ -49,9 +49,9 @@ const Header = () => {
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                                 Aungstrome EduHive
                             </span>
-                        </Link>
+                        </Link> */}
                         <ul className="flex items-center hidden space-x-8 lg:flex">
-                            <li>
+                            {/* <li>
                                 <Link
                                     to="/courses"
                                     aria-label="Courses"
@@ -71,7 +71,7 @@ const Header = () => {
                                 >
                                     FAQ
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link
                                     to="/blog"
@@ -83,7 +83,7 @@ const Header = () => {
                                 </Link>
                             </li>
                         </ul>
-                    </div> */}
+                    </div>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
                         <li>
                             <>
@@ -234,7 +234,7 @@ const Header = () => {
                                     </div>
                                     <nav>
                                         <ul className="space-y-4">
-                                            {/* <li>
+                                            <li>
                                                 <Link
                                                     to="/courses"
                                                     aria-label="Courses"
@@ -264,7 +264,7 @@ const Header = () => {
                                                 >
                                                     Blog
                                                 </Link>
-                                            </li> */}
+                                            </li>
 
                                             <li>
                                                 <>
