@@ -1,15 +1,15 @@
 import React from 'react';
 import Banner from './Banner';
 import Pricing from './Pricing';
-// import About from '../About/About';
-// import Banner from '../Banner/Banner';
-// import Services from '../Services/Services';
+import Team from './Team';
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <Pricing></Pricing>
+            <Team></Team>
         </div>
     );
 };
