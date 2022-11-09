@@ -56,16 +56,6 @@ const Header = () => {
                                 </Link>
                             </li>
 
-                            {/* <li>
-                                <Link
-                                    to="/faq"
-                                    aria-label="FAQ"
-                                    title="FAQ"
-                                    className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                >
-                                    FAQ
-                                </Link>
-                            </li> */}
                             <li>
                                 <Link
                                     to="/blog"
@@ -75,6 +65,39 @@ const Header = () => {
                                 >
                                     Blog
                                 </Link>
+                            </li>
+                            <li>
+                                <>
+                                    {
+                                        user?.uid ?
+                                            <>
+                                                <span className='mr-3'>
+                                                    <Link
+                                                        to="/reviews"
+                                                        aria-label="My Reviews"
+                                                        title="My Reviews"
+                                                        className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    >
+                                                        My Reviews
+                                                    </Link>
+                                                </span>
+                                                <span className='ml-3'>
+                                                    <Link
+                                                        to="/addservice"
+                                                        aria-label="Add Service"
+                                                        title="Add Service"
+                                                        className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    >
+                                                        Add Service
+                                                    </Link>
+                                                </span>
+                                            </>
+                                            :
+                                            <>
+                                            </>
+
+                                    }
+                                </>
                             </li>
                         </ul>
                     </div>
@@ -88,6 +111,7 @@ const Header = () => {
                                             <button
                                                 onClick={handleLogout}
                                                 className='px-8 py-3 font-semibold rounded-md bg-deep-purple-accent-400 hover:bg-gray-700 hover:text-white text-gray-100'>Log out</button>
+
                                         </>
                                         :
                                         <>
@@ -108,6 +132,7 @@ const Header = () => {
                                                 Sign up
                                             </Link>
                                         </>
+
                                 }
                             </>
                         </li>
@@ -205,16 +230,7 @@ const Header = () => {
                                                 </Link>
                                             </li>
 
-                                            {/* <li>
-                                                <Link
-                                                    to="/faq"
-                                                    aria-label="FAQ"
-                                                    title="FAQ"
-                                                    className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    FAQ
-                                                </Link>
-                                            </li> */}
+
                                             <li>
                                                 <Link
                                                     to="/blog"
