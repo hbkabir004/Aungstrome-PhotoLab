@@ -47,7 +47,7 @@ const Header = () => {
                         <ul className="flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <Link
-                                    to="/services"
+                                    to="/allservices"
                                     aria-label="services"
                                     title="services"
                                     className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -221,7 +221,7 @@ const Header = () => {
                                         <ul className="space-y-4">
                                             <li>
                                                 <Link
-                                                    to="/services"
+                                                    to="/allservices"
                                                     aria-label="services"
                                                     title="services"
                                                     className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"

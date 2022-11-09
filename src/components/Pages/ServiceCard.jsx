@@ -37,7 +37,7 @@ const ServiceCard = ({ photoService }) => {
 
                             <p className="text-xl text-deep-purple-accent-400 font-semibold mt-2">Price: ${price}</p>
                             <div className='flex justify-end align-middle'>
-                                <Link to={`/services/${service_id}`}>
+                                <Link to={`/allservices/${service_id}`}>
                                     <button type="button" class="focus:outline-none text-white bg-deep-purple-accent-400 hover:bg-gray-400 hover:text-black  focus:ring-4 font-semibold rounded-md text-sm px-5 py-2.5 mb-2">View Details</button>
                                 </Link>
                             </div>
