@@ -45,18 +45,18 @@ const Header = () => {
                             </span>
                         </Link>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
-                            {/* <li>
+                            <li>
                                 <Link
-                                    to="/courses"
-                                    aria-label="Courses"
-                                    title="Courses"
+                                    to="/services"
+                                    aria-label="services"
+                                    title="services"
                                     className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                 >
-                                    Courses
+                                    Services
                                 </Link>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <Link
                                     to="/faq"
                                     aria-label="FAQ"
@@ -196,16 +196,16 @@ const Header = () => {
                                         <ul className="space-y-4">
                                             <li>
                                                 <Link
-                                                    to="/courses"
-                                                    aria-label="Courses"
-                                                    title="Courses"
+                                                    to="/services"
+                                                    aria-label="services"
+                                                    title="services"
                                                     className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Courses
+                                                    Services
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            {/* <li>
                                                 <Link
                                                     to="/faq"
                                                     aria-label="FAQ"
@@ -214,7 +214,7 @@ const Header = () => {
                                                 >
                                                     FAQ
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                             <li>
                                                 <Link
                                                     to="/blog"
