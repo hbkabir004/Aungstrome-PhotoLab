@@ -19,10 +19,10 @@ const Header = () => {
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between ">
                     <div className="flex items-center">
-                        {/* <Link
+                        <Link
                             to="/"
-                            aria-label="Learn with Aungstrome"
-                            title="Learn with Aungstrome"
+                            aria-label="Aungstrome PhotoLab"
+                            title="Aungstrome PhotoLab"
                             className="inline-flex items-center mr-8"
                         >
                             <svg
@@ -41,9 +41,9 @@ const Header = () => {
                                 <rect x="14" y="11" width="7" height="12" />
                             </svg>
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                Aungstrome EduHive
+                                Aungstrome PhotoLab
                             </span>
-                        </Link> */}
+                        </Link>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
                             {/* <li>
                                 <Link
@@ -149,11 +149,11 @@ const Header = () => {
                             <div className="absolute top-0 left-0 w-full">
                                 <div className="p-5 bg-white border rounded shadow-sm  dark:bg-gray-500">
                                     <div className="flex items-center justify-between mb-4">
-                                        {/* <div>
+                                        <div>
                                             <Link
                                                 to="/"
-                                                aria-label="Company"
-                                                title="Company"
+                                                aria-label="Aungstrome PhotoLab"
+                                                title="Aungstrome PhotoLab"
                                                 className="inline-flex items-center"
                                             >
                                                 <svg
@@ -172,10 +172,10 @@ const Header = () => {
                                                     <rect x="14" y="11" width="7" height="12" />
                                                 </svg>
                                                 <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                    Aungstrome EduHive
+                                                    Aungstrome PhotoLab
                                                 </span>
                                             </Link>
-                                        </div> */}
+                                        </div>
                                         <div>
                                             <button
                                                 aria-label="Close Menu"
