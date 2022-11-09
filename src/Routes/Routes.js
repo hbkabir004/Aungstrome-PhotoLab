@@ -3,6 +3,7 @@ import Registration from '../components/Auth/Registration';
 import SignIn from '../components/Auth/SignIn';
 import Blog from '../components/Pages/Blog';
 import Home from '../components/Pages/Home';
+import ErrorPage from '../components/Shared/ErrorPage';
 import Main from '../layout/Main.jsx';
 
 export const routes = createBrowserRouter([
@@ -26,6 +27,10 @@ export const routes = createBrowserRouter([
                 path: '/blog',
                 element: <Blog></Blog>
             },
+            {
+                path: '*',
+                element: <ErrorPage></ErrorPage>
+            }
         ]
     },
 ])
