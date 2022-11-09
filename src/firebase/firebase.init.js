@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCJhhn06ATWymnsVonmKWil76yjpDMPjys",
-  authDomain: "photolab-a9b6f.firebaseapp.com",
-  projectId: "photolab-a9b6f",
-  storageBucket: "photolab-a9b6f.appspot.com",
-  messagingSenderId: "711201033046",
-  appId: "1:711201033046:web:f17854b1abb379cad524f7"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId:  process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
