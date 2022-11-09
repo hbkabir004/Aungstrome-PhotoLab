@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import Features from './Features';
 import Pricing from './Pricing';
-import Services from './Services';
+import Services from './Services/Services';
 import Team from './Team';
 
 

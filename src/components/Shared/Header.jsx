@@ -172,7 +172,7 @@ const Header = () => {
                         </button>
                         {isMenuOpen && (
                             <div className="absolute top-0 left-0 w-full">
-                                <div className="p-5 bg-white border rounded shadow-sm  dark:bg-gray-500">
+                                <div className="p-5 bg-white border rounded shadow-sm ">
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <Link
@@ -240,6 +240,39 @@ const Header = () => {
                                                 >
                                                     Blog
                                                 </Link>
+                                            </li>
+                                            <li>
+                                                <>
+                                                    {
+                                                        user?.uid ?
+                                                            <>
+                                                                <li>
+                                                                    <Link
+                                                                        to="/reviews"
+                                                                        aria-label="My Reviews"
+                                                                        title="My Reviews"
+                                                                        className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                                    >
+                                                                        My Reviews
+                                                                    </Link>
+                                                                </li>
+                                                                <li className='mt-4'>
+                                                                    <Link
+                                                                        to="/addservice"
+                                                                        aria-label="Add Service"
+                                                                        title="Add Service"
+                                                                        className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                                    >
+                                                                        Add Service
+                                                                    </Link>
+                                                                </li>
+                                                            </>
+                                                            :
+                                                            <>
+                                                            </>
+
+                                                    }
+                                                </>
                                             </li>
 
                                             <li>
