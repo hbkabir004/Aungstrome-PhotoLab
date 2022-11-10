@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Registration from '../components/Auth/Registration';
 import SignIn from '../components/Auth/SignIn';
-import AddService from '../components/Pages/AddService';
 import Blog from '../components/Pages/Blog';
 import Home from '../components/Pages/Home';
-import MyReviews from '../components/Pages/MyReviews';
 import AllReviews from '../components/Pages/Reviews/AllReviews';
+import MyReviews from '../components/Pages/Reviews/MyReviews';
+import AddService from '../components/Pages/Services/AddService';
 import AllServices from '../components/Pages/Services/AllServices';
 import ServiceDetails from '../components/Pages/Services/ServiceDetails';
 import ErrorPage from '../components/Shared/ErrorPage';
@@ -44,8 +44,9 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://photolab.vercel.app/reviews/${params.id}`)
             },
             {
-                path: '/reviews',
-                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+                path: '/myreviews',
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://photolab.vercel.app/reviews/`)
             },
             {
                 path: '/addservice',

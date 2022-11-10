@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/UserContext';
 
 const ReviewForm = () => {
@@ -7,21 +8,25 @@ const ReviewForm = () => {
         event.preventDefault();
         const form = event.target;
         const name = user?.displayName || 'user';
+        const img = user?.photoURL || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6dVUhZ65EmrXkzr-E52sNG5I11mUheSqdwRov7uwr_FttgEtrLuPs9X1LtGB-jN3n-uw&usqp=CAU';
         const email = user?.email || 'unregistered';
         const id = form.id.value;
         const date = form.date.value;
-        const message = form.message.value;
+        const rating = form.star.value;
+        const text = form.message.value;
 
         const userReview = {
             service_id: id,
             customer: name,
+            img,
+            rating,
             email,
-            message,
+            text,
             date
         }
         // console.log(userReview)
 
-        fetch('localhost:5000/reviews/', {
+        fetch('https://photolab.vercel.app/reviews/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -80,12 +85,15 @@ const ReviewForm = () => {
                     <div class="mb-6">
                         <input type="text" name="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Days ago (Date-Single Number)" required />
                     </div>
+                    <div class="mb-6">
+                        <input type="text" name="star" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Star (1-5)" required />
+                    </div>
                     <textarea name="message" rows="3" placeholder="Message..." className="p-4 rounded-md resize-none text-gray-700 bg-gray-50"></textarea>
                     <button type="submit" className="py-4 my-8 font-semibold rounded-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-200 text-white">Leave feedback</button>
                 </form>
             </div>
             <div className="flex items-center justify-center">
-                <a rel="noopener noreferrer" href="#" className="text-sm font-semibold hover:text-white">Maybe later</a>
+                <Link rel="noopener noreferrer" to='/' className="text-sm font-semibold hover:text-white">Maybe later</Link>
             </div>
         </div>
 

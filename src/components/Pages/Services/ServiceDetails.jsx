@@ -3,8 +3,10 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/UserContext';
+import PrivateRoute from '../../../Routes/PrivateRoute';
 import AllReviews from '../Reviews/AllReviews';
 import ReviewForm from '../Reviews/ReviewForm';
+
 
 const ServiceDetails = () => {
     const service = useLoaderData();
@@ -65,7 +67,7 @@ const ServiceDetails = () => {
                 {
                     user?.uid ?
                         <>
-                            <ReviewForm></ReviewForm>
+                            <PrivateRoute><ReviewForm></ReviewForm></PrivateRoute>
                         </>
                         :
                         <div className='text-3xl font-semibold text-center mb-10'>

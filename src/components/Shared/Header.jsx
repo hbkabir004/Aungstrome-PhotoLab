@@ -73,7 +73,7 @@ const Header = () => {
                                             <>
                                                 <span className='mr-3'>
                                                     <Link
-                                                        to="/reviews"
+                                                        to="/myreviews"
                                                         aria-label="My Reviews"
                                                         title="My Reviews"
                                                         className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -248,7 +248,7 @@ const Header = () => {
                                                             <>
                                                                 <li>
                                                                     <Link
-                                                                        to="/reviews"
+                                                                        to="/myreviews"
                                                                         aria-label="My Reviews"
                                                                         title="My Reviews"
                                                                         className="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
