@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/UserContext';
 import AllReviews from '../Reviews/AllReviews';
+import ReviewForm from '../Reviews/ReviewForm';
 
 const ServiceDetails = () => {
     const service = useLoaderData();
     const { service_id, title, img, price, description } = service;
+    const { user } = useContext(AuthContext);
     return (
         <div>
             <PhotoProvider
@@ -52,8 +55,24 @@ const ServiceDetails = () => {
                 </div>
             </PhotoProvider>
 
-            {/* <ReviewForm></ReviewForm> */}
             <AllReviews></AllReviews>
+            <div className='text-center mt-20'>
+                <p className="inline-block px-5 py-2 text-sm font-semibold tracking-wider text-deep-purple-accent-400 uppercase rounded-full bg-gray-300 mb-5">
+                    Your Feedback
+                </p>
+            </div>
+            <>
+                {
+                    user?.uid ?
+                        <>
+                            <ReviewForm></ReviewForm>
+                        </>
+                        :
+                        <div className='text-3xl font-semibold text-center mb-10'>
+                            <h1>Please, <span className='text-deep-purple-accent-400 hover:text-gray-600'><Link to='/signin'>SignIn</Link></span> to add Review  </h1>
+                        </div>
+                }
+            </>
 
         </div>
 

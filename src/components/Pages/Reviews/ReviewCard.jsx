@@ -13,6 +13,8 @@ const ReviewCard = ({ serviceReview }) => {
                     <div>
                         <h4 className="font-bold">{name}</h4>
                         <span className="text-xs text-gray-400">{date} days ago</span>
+                        <br />
+                        <span className="text-xs text-gray-400">Service ID: {service_id}</span>
                     </div>
                 </div>
                 <div className="flex items-center space-x-2 text-yellow-500">
