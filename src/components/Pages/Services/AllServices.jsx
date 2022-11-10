@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../Hooks/useTitle';
+
 import ServiceCard from './ServiceCard';
 
 const AllServices = () => {
+    useTitle('PhotoLab | Services');
     const [allServices, setAllServices] = useState([]);
     useEffect(() => {
         fetch(`https://photolab.vercel.app/allservices`)
@@ -54,8 +57,6 @@ const AllServices = () => {
                         allServices.map(service => <ServiceCard
                             key={service.service_id}
                             photoService={service}
-                        // handleUpdate={handleUpdate}
-                        // handleDelete={handleDelete}
                         ></ServiceCard>)
                     }
                 </div>

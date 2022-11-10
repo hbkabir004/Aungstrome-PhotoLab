@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../contexts/UserContext';
+import useTitle from '../../../Hooks/useTitle';
 
 const EditReview = () => {
     const editedReview = useLoaderData();
@@ -9,6 +10,8 @@ const EditReview = () => {
     const { review_id } = editedReview;
     const [review, setReview] = useState();
     const { user } = useContext(AuthContext);
+
+    useTitle('PhotoLab | EditReview');
     const handleUpdate = (event, id) => {
         event.preventDefault();
         fetch(`https://photolab.vercel.app/reviews/${review_id}`, {

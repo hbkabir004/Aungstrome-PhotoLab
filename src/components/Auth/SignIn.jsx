@@ -3,12 +3,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../contexts/UserContext';
+import useTitle from '../../Hooks/useTitle';
 
 const SignIn = () => {
     const [userEmail, setUserEmail] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+    useTitle('PhotoLab | SignIn')
 
     const { signin, resetPassword, signInWithGoogle, signInWithFacebook, signInWithGithub } = useContext(AuthContext)
 
@@ -167,7 +169,7 @@ const SignIn = () => {
                 </div>
                 <p className='px-6 text-sm text-center text-gray-400'>
                     Don't have an account yet?{' '}
-                    <Link to='/register' className='hover:underline text-deep-purple-accent-400'>
+                    <Link to='/signup' className='hover:underline text-deep-purple-accent-400'>
                         Sign up
                     </Link>
                     .

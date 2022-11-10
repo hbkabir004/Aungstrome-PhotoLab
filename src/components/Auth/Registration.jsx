@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { AuthContext } from '../../contexts/UserContext'
+import React, { useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../contexts/UserContext';
+import useTitle from '../../Hooks/useTitle';
 
 
 const Registration = () => {
+    useTitle('PhotoLab | SignUp')
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'

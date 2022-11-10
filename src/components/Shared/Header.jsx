@@ -21,8 +21,8 @@ const Header = () => {
                     <div className="flex items-center">
                         <Link
                             to="/"
-                            aria-label="Aungstrome PhotoLab"
-                            title="Aungstrome PhotoLab"
+                            aria-label="PhotoLab"
+                            title="PhotoLab"
                             className="inline-flex items-center mr-8"
                         >
                             <svg
@@ -41,7 +41,7 @@ const Header = () => {
                                 <rect x="14" y="11" width="7" height="12" />
                             </svg>
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                Aungstrome PhotoLab
+                                PhotoLab
                             </span>
                         </Link>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -177,8 +177,8 @@ const Header = () => {
                                         <div>
                                             <Link
                                                 to="/"
-                                                aria-label="Aungstrome PhotoLab"
-                                                title="Aungstrome PhotoLab"
+                                                aria-label="PhotoLab"
+                                                title="PhotoLab"
                                                 className="inline-flex items-center"
                                             >
                                                 <svg
@@ -197,7 +197,7 @@ const Header = () => {
                                                     <rect x="14" y="11" width="7" height="12" />
                                                 </svg>
                                                 <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                    Aungstrome PhotoLab
+                                                    PhotoLab
                                                 </span>
                                             </Link>
                                         </div>
