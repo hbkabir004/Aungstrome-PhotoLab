@@ -30,7 +30,7 @@ const ServiceDetails = () => {
                 <div className='flex justify-center align-middle mb-10'>
                     <div
                         aria-label="View Item"
-                        className="w-1/4 inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+                        className="lg:w-1/4 w-full inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                     >
                         <div className="flex flex-col h-full">
                             <PhotoView src={img}>
