@@ -4,7 +4,7 @@ React.js Web Application with firebase authentication for a professional wedding
 
 ## Live Link
 
-Hosted in Firebase -> [Aungstrome EduHive Website](https://photolab-a9b6f.web.app/)
+Hosted in Firebase -> [PhotoLab Website](https://photolab-a9b6f.web.app/)
 
 ## Context API
 
