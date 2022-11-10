@@ -35,8 +35,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/allservices/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                // loader: ({ params }) => fetch(`https://photolab.vercel.app/allservices/${params.id}`)
-                loader: ({ params }) => fetch(`http://localhost:5000/allservices/${params.id}`)
+                loader: ({ params }) => fetch(`https://photolab.vercel.app/allservices/${params.id}`)
             },
             {
                 path: '/reviews',
