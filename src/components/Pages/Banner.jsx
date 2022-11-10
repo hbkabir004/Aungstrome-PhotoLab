@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -35,19 +36,19 @@ const Banner = () => {
                         We are a photo editing company that provides editing services for professional wedding photographers, and that means we work with a lot of amazing pro wedding photographers. And we’ve been following wedding photographers and influencers very closely for years!
                     </p>
                     <div className="flex items-center">
-                        <a
-                            href="/courses"
+                        <Link
+                            to="/services"
                             className="inline-flex text-white items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-deep-purple-accent-400 hover:bg-gray-400 focus:shadow-outline focus:outline-none"
                         >
                             Get started
-                        </a>
-                        <a
-                            href="/faq"
+                        </Link>
+                        <Link
+                            to="/blog"
                             aria-label=""
                             className="inline-flex items-center font-semibold text-deep-purple-accent-400 transition-colors duration-200 hover:text-gray-400"
                         >
                             Learn more
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
