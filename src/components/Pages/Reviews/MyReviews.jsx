@@ -15,14 +15,21 @@ const MyReviews = () => {
                     My Reviews
                 </p>
             </div>
-            <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2 mb-80">
-                {
-                    myReviews.map(review => <ReviewCard
-                        key={review.review_id}
-                        serviceReview={review}
-                    ></ReviewCard>)
-                }
-            </div>
+            {
+                myReviews.length === 0 ?
+                    <>
+                        <h1 className='mb-96 mt-20 text-center text-3xl font-semibold'>No Reviews were added</h1>
+                    </>
+                    :
+                    <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2 mb-80">
+                        {
+                            myReviews.map(review => <ReviewCard
+                                key={review.review_id}
+                                serviceReview={review}
+                            ></ReviewCard>)
+                        }
+                    </div>
+            }
         </div>
     );
 };

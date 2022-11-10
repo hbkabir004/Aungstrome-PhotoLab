@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../../contexts/UserContext';
 
 const ReviewForm = () => {
@@ -10,13 +11,15 @@ const ReviewForm = () => {
         const name = user?.displayName || 'user';
         const img = user?.photoURL || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6dVUhZ65EmrXkzr-E52sNG5I11mUheSqdwRov7uwr_FttgEtrLuPs9X1LtGB-jN3n-uw&usqp=CAU';
         const email = user?.email || 'unregistered';
-        const id = form.id.value;
+        const service_id = form.service_id.value;
+        const review_id = form.review_id.value;
         const date = form.date.value;
         const rating = form.star.value;
         const text = form.message.value;
 
         const userReview = {
-            service_id: id,
+            service_id,
+            review_id,
             customer: name,
             img,
             rating,
@@ -37,11 +40,11 @@ const ReviewForm = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Review uploaded successfully')
+                    toast.success('Review uploaded successfully')
                     form.reset();
                 }
             })
-            .catch(er => console.error(er));
+            .catch(er => toast.error(er));
 
     }
     return (
@@ -80,7 +83,10 @@ const ReviewForm = () => {
                 </div>
                 <form onSubmit={handleReview} className="flex flex-col w-full">
                     <div class="mb-6">
-                        <input type="text" name="id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Service ID" required />
+                        <input type="text" name="service_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Service ID" required />
+                    </div>
+                    <div class="mb-6">
+                        <input type="text" name="review_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Review ID" required />
                     </div>
                     <div class="mb-6">
                         <input type="text" name="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Days ago (Date-Single Number)" required />

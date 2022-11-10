@@ -4,6 +4,7 @@ import SignIn from '../components/Auth/SignIn';
 import Blog from '../components/Pages/Blog';
 import Home from '../components/Pages/Home';
 import AllReviews from '../components/Pages/Reviews/AllReviews';
+import EditReview from '../components/Pages/Reviews/EditReview';
 import MyReviews from '../components/Pages/Reviews/MyReviews';
 import AddService from '../components/Pages/Services/AddService';
 import AllServices from '../components/Pages/Services/AllServices';
@@ -32,6 +33,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/allservices',
                 element: <AllServices></AllServices>
+            },
+            {
+                path: '/edit/:id',
+                element: <EditReview></EditReview>,
+                loader: ({ params }) => fetch(`https://photolab.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/allservices/:id',

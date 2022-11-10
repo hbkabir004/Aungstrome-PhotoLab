@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link, useLoaderData } from 'react-router-dom';
@@ -9,9 +9,13 @@ import ReviewForm from '../Reviews/ReviewForm';
 
 
 const ServiceDetails = () => {
-    const service = useLoaderData();
-    const { service_id, title, img, price, description } = service;
+    const [allServices, setAllServices] = useState();
+    const services = useLoaderData();
+    const { _id, service_id, title, img, price, description } = services;
     const { user } = useContext(AuthContext);
+
+
+
     return (
         <div>
             <PhotoProvider

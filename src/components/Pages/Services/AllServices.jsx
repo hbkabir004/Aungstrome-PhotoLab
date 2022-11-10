@@ -9,6 +9,9 @@ const AllServices = () => {
             .then(data => setAllServices(data))
             .catch(error => console.log(error))
     }, [])
+
+
+
     return (
         <div>
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -51,6 +54,8 @@ const AllServices = () => {
                         allServices.map(service => <ServiceCard
                             key={service.service_id}
                             photoService={service}
+                        // handleUpdate={handleUpdate}
+                        // handleDelete={handleDelete}
                         ></ServiceCard>)
                     }
                 </div>

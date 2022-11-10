@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ReviewCard = ({ serviceReview }) => {
-    const { service_id, name, img, text, email, date, rating } = serviceReview;
+    const { review_id, service_id, name, img, text, email, date, rating } = serviceReview;
+    const [review, setReview] = useState(serviceReview);
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure, you want to cancel this order');
+        if (proceed) {
+            fetch(`https://photolab.vercel.app/reviews/${review_id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        toast.success('deleted successfully');
+                        const remaining = review.filter(s => s.review_id !== id);
+                        setReview(remaining);
+                    }
+                })
+        }
+    }
+
+
+
     return (
 
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 dark:text-gray-100">
@@ -15,6 +39,8 @@ const ReviewCard = ({ serviceReview }) => {
                         <span className="text-xs text-gray-400">{date} days ago</span>
                         <br />
                         <span className="text-xs text-gray-400">Service ID: {service_id}</span>
+                        <br />
+                        <span className="text-xs text-gray-400">Review ID: {review_id}</span>
                     </div>
                 </div>
                 <div className="flex items-center space-x-2 text-yellow-500">
@@ -25,8 +51,19 @@ const ReviewCard = ({ serviceReview }) => {
                 </div>
             </div>
             <div className="p-4 space-y-2 text-sm text-gray-400">
-                <p>{text}</p>
+                <p className='mb-10'>{text}</p>
+                <div className='flex justify-between align-middle mt-5'>
+                    <div>
+                        <button onClick={() => handleDelete(review_id)} type="button" class="focus:outline-none text-white bg-deep-purple-accent-400 hover:bg-gray-400 hover:text-black  focus:ring-4 font-semibold rounded-md text-sm px-5 py-2.5 mb-2">Delete</button>
+                    </div>
+                    <div>
+                        <Link to={`/edit/${review_id}`}>
+                            <button type="button" class="focus:outline-none text-white bg-deep-purple-accent-400 hover:bg-gray-400 hover:text-black  focus:ring-4 font-semibold rounded-md text-sm px-5 py-2.5 mb-2">Edit</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
+
         </div>
     );
 };

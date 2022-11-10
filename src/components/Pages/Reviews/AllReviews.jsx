@@ -5,6 +5,7 @@ import ReviewCard from './ReviewCard';
 const AllReviews = () => {
   const selectedReviews = useLoaderData();
   const { service_id } = selectedReviews;
+  const [updatedReview, setUpdatedReview] = useState();
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {

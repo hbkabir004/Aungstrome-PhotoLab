@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../../contexts/UserContext';
 
 const AddService = () => {
@@ -35,11 +36,11 @@ const AddService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('New Service uploaded successfully')
+                    toast.success('New Service uploaded successfully')
                     form.reset();
                 }
             })
-            .catch(er => console.error(er));
+            .catch(er => toast.error(er));
 
     }
     return (
