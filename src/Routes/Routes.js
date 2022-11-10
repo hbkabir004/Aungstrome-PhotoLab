@@ -5,6 +5,7 @@ import AddService from '../components/Pages/AddService';
 import Blog from '../components/Pages/Blog';
 import Home from '../components/Pages/Home';
 import MyReviews from '../components/Pages/MyReviews';
+import AllReviews from '../components/Pages/Reviews/AllReviews';
 import AllServices from '../components/Pages/Services/AllServices';
 import ServiceDetails from '../components/Pages/Services/ServiceDetails';
 import ErrorPage from '../components/Shared/ErrorPage';
@@ -36,6 +37,11 @@ export const routes = createBrowserRouter([
                 path: '/allservices/:id',
                 element: <ServiceDetails></ServiceDetails>,
                 loader: ({ params }) => fetch(`https://photolab.vercel.app/allservices/${params.id}`)
+            },
+            {
+                path: '/reviews/:id',
+                element: <AllReviews></AllReviews>,
+                loader: ({ params }) => fetch(`https://photolab.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/reviews',

@@ -3,6 +3,7 @@ import React from 'react';
 const ReviewCard = ({ serviceReview }) => {
     const { service_id, name, img, text, email, date, rating } = serviceReview;
     return (
+
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 dark:text-gray-100">
             <div className="flex justify-between p-4">
                 <div className="flex space-x-4">
