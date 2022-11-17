@@ -1,4 +1,4 @@
-# PhotoLab Client Side Repository (Assignment-11)
+# PhotoLab Client Side Repository
 
 React.js Web Application with firebase authentication for a professional wedding photographer company to expose their services and get reviewed by their clients. Made using React.js, Tailwind CSS and React Router DOM, MongoDB and Google firebase Auth.
 
