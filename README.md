@@ -6,27 +6,12 @@ React.js Web Application with firebase authentication for a professional wedding
 
 Hosted in Firebase -> [PhotoLab Website](https://photolab-a9b6f.web.app/)
 
-##  PhotoLab-Server
+#  PhotoLab-Server
 
-Repository Link -> [Link](https://github.com/hbkabir004/PhotoLab-Server)
-
-## React Router Dom v6.4
-
-Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
-
-## Firebase Authentication
-
-Documentation Link -> [Link](https://firebase.google.com/docs/auth/web/start?hl=en&authuser=1)
-
-## MongoDB CRUD operations
-
-Documentation Link -> [Link](https://www.mongodb.com/docs/drivers/node/current/usage-examples/)
+<b> [Server Side Repository](https://github.com/hbkabir004/PhotoLab-Server) </b>
 
 ## Resources & Credits
 
-Tailwind Components ->
-[Kitwind](https://kitwind.io/products/kometa/components)
+[Kitwind (Tailwind Components) ](https://kitwind.io/products/kometa/components)
 
-## Other Resources
-
-Icon -> [ReactIcon](https://react-icons.github.io/react-icons/)
+[ReactIcon](https://react-icons.github.io/react-icons/)
